@@ -8,39 +8,54 @@ To install this repo, follow there steps:
 
 1. Clone the repository:
 
+    ```sh
     $ git clone https://github.com/mutse/adk_tool_agent.git
     $ cd adk_tool_agent
+    ```
 
 2. Install the required dependencies:
 
+    ```sh
     $ brew install uv  # for MacOS
     $ uv venv
     $ source .venv/bin/activate
     $ uv add google-adk litellm
+    ```
 
 ## Usage
 
 1. Navigate to the project directory:
 
+    ```sh
     $ cd adk_tool_agent
+    ```
 
 2. Change to the directory of too\_agent, and copy env.example as .env:
 
+    ```sh
     $ cp env.example .env
+    ```
 
 3. Modify the variables of `$HOST` and `$PORT` for your local ollama url:
 
+    ```markdown
     OPENAI_BASE_URL=http://$HOST:$PORT/v1
     OPENAI_API_KEY=ollama
     CHAT_MODEL=llama3.2:3b
+    ```
 
 4. Navigate to the project directory:
 
+    ```sh
     $ cd ..
+    ```
 
 5. Run the agent:
 
+    ```sh
     $ adk run tool_agent
+    ```
+    ```markdown
     Log setup complete: /var/folders/gz/n243fjbn1pqbtm6dpx640crc0000gn/T/agents_log/agent.20250416_211728.log
     To access latest log: tail -F /var/folders/gz/n243fjbn1pqbtm6dpx640crc0000gn/T/agents_log/agent.latest.log
     Running agent weather_time_agent, type exit to exit.
@@ -71,6 +86,7 @@ To install this repo, follow there steps:
     21:19:25 - LiteLLM:INFO: cost_calculator.py:636 - selected model name for cost calculation: openai/llama3.2:3b
     [weather_time_agent]: The current weather in New York is sunny, with a comfortable temperature of 25°C (41°F).
     user: exit
+    ```
 
 ## License
 
